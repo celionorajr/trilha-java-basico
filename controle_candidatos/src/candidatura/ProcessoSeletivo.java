@@ -5,7 +5,7 @@ public class ProcessoSeletivo {
 	public static void main(String[] args) {
 		String candidatos [] = {"DAHYUM","MINA","MOMO","TZUYU","SANA"};
 		for(String candidato : candidatos) {
-			entrandoEmContato(candidato);
+			entrandoEmContato(candidato); 
 		}
 	}
 	
