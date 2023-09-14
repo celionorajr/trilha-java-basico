@@ -1,8 +1,9 @@
 public class App {
     public static void main(String[] args) {
-        
-        Conta cc = new ContaCorrente();
-        Conta cp = new ContaPoupanca();
+        Cliente cliente = new Cliente();
+        cliente.setNome("Celio Nora Junior");
+        Conta cc = new ContaCorrente(cliente);
+        Conta cp = new ContaPoupanca(cliente);
 
         cc.depositar(500);
         cc.sacar(50);

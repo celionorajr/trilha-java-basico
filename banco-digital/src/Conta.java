@@ -5,11 +5,13 @@ public abstract class Conta  implements IConta{
     protected int numConta;
     protected int numAgencia;
     protected double saldo;
+    protected Cliente cliente;
 
     
-    public Conta() {
+    public Conta(Cliente cliente) {
         this.numConta = SEQUENCIAL++;
         this.numAgencia = Conta.AGENCIA_PADRAO;
+        this.cliente = cliente;
     }
     public int getNumConta() {
         return numConta;
@@ -28,7 +30,7 @@ public abstract class Conta  implements IConta{
             saldo -= valor;
             return true;
         }
-        
+
         System.out.println("Limite insuficinte.");
         return false;
              
@@ -48,7 +50,7 @@ public abstract class Conta  implements IConta{
     }
     @Override
     public String toString() {
-        return "Conta [numConta=" + numConta + ", numAgencia=" + numAgencia + ", saldo=" + saldo + "]";
+        return "Conta [Titular=" + cliente.getNome() + ", numConta=" + numConta + ", numAgencia=" + numAgencia + ", saldo=" + saldo + "]";
     }
     
     
